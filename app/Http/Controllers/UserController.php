@@ -38,15 +38,15 @@ class UserController extends Controller
         $validated = $request->validate([
 
             'name' => 'required|unique:users|max:10|min:4',
-            'email' => 'required|unique:emails',
+            'email' => 'required|unique:users',
             'password' => 'required|max:40|min:4'
         ]);
 
-        //$user = User::create($validated);
+        $user = User::create($validated);
 
-        //auth()->login($user);
+        auth()->login($user);
 
-        //return redirect('/ideas');
+        return redirect('/ideas');
 
 
 
