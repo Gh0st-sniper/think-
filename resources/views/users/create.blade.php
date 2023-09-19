@@ -10,6 +10,6 @@
     <label for=""> Password </label>
     <input type="text" name="password" id=""><br>
     
-    <input type="text" name="submit" id="">
+    <input type="submit" name="Create Account" id="">
 
 </form>
