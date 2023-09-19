@@ -49,4 +49,6 @@ class User extends Authenticatable
 
         $this->hasMany('idea_id', IdeaController::class);
     }
+
+   
 }
