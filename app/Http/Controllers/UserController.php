@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use function Termwind\render;
+use App\Models\Idea;
+
 class UserController extends Controller
 {
     /**
@@ -17,9 +20,11 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Idea $idea)
     {
         //
+
+        return view('users.create', ['idea' => $idea]);
     }
 
     /**
