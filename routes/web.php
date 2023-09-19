@@ -27,3 +27,7 @@ Route::resource('comments',CommentController::class);
 /* users */
 
 Route::get("/users/create", [UserController::class, 'create']);
+
+/* ideas */
+
+Route::get("/ideas/{id}", [IdeaController::class, 'show']);
