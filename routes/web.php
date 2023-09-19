@@ -23,3 +23,7 @@ Route::get('/', function () {
 Route::resource('users', UserController::class);
 Route::resource('ideas', IdeaController::class);
 Route::resource('comments',CommentController::class);
+
+/* users */
+
+Route::get("/users/create", [UserController::class, 'create']);
