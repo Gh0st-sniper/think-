@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use function Termwind\render;
 use App\Models\Idea;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -33,6 +34,23 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+
+        $validated = $request->validate([
+
+            'name' => 'required|unique:users|max:10|min:4',
+            'email' => 'required|unique:emails',
+            'password' => 'required|max:40|min:4'
+        ]);
+
+        //$user = User::create($validated);
+
+        //auth()->login($user);
+
+        //return redirect('/ideas');
+
+
+
+
     }
 
     /**
