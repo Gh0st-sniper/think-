@@ -34,9 +34,10 @@ class IdeaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Idea $idea)
+    public function show($id)
     {
         //
+        return view('ideas.show');
     }
 
     /**
