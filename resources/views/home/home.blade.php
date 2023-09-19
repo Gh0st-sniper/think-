@@ -8,6 +8,12 @@
 <body>
 
 <h1> Welcome to Think </h1>
+
+<nav>
+
+    <a href="/users/create"> Sign Up </a>
+    <a href="/users"> Login </a>
+</nav>
     
 </body>
 </html>
