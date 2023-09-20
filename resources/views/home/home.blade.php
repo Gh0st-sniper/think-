@@ -12,7 +12,7 @@
 <nav>
 
     <a href="/users/create"> Sign Up </a>
-    <a href="/users"> Login </a>
+    <a href="/login"> Login </a>
 </nav>
     
 </body>
