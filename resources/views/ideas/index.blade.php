@@ -11,9 +11,9 @@
 
 @foreach($ideas as $idea)
 
-<h1> {{ auth()->user()->name }} </h1>
+<h1> {{ $idea->title }}  </h1>
 
-<p>  </p>
+<p> {{ $idea->description }}  </p>
 
 <hr>
 
