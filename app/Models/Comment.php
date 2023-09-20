@@ -12,6 +12,6 @@ class Comment extends Model
 
     public function ideas () {
 
-        $this->belongsTo('idea_id', IdeaController::class);
+        $this->belongsTo(IdeaController::class);
     }
 }

@@ -45,9 +45,9 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function idea() {
+    public function ideas() {
 
-        $this->hasMany('idea_id', IdeaController::class);
+        $this->hasMany(IdeaController::class);
     }
 
    

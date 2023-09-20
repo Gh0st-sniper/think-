@@ -13,7 +13,7 @@ class Idea extends Model
 
     public function user() {
 
-        $this->belongsTo('user_id', UserController::class);
+        $this->belongsTo(UserController::class);
     }
 
 
@@ -21,7 +21,7 @@ class Idea extends Model
 
     public function comments() {
 
-        $this->hasMany('comment_id', CommentController::class);
+        $this->hasMany(CommentController::class);
     }
 
 }
