@@ -4,7 +4,8 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\CakesController;
+use App\Http\Controllers\IdeasController;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -24,6 +25,12 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+
+    public function ideas()
+    {
+        return $this->hasMany(Idea::class);
+    }
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -45,10 +52,7 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function ideas() {
-
-        $this->hasMany(IdeaController::class);
-    }
+   
 
    
 }
