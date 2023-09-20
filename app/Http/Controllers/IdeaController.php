@@ -13,7 +13,7 @@ class IdeaController extends Controller
      */
     public function index(Idea $ideas)
     {
-        //$ideas = Auth::user()->ideas();
+        $ideas = Auth::user()->ideas;
 
         return view('ideas.index', ['ideas' => $ideas] );
     }
