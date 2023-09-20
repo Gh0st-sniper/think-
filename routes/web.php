@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\CakesController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\IdeasController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -32,10 +34,10 @@ Route::get("/users/create", [UserController::class, 'create']);
 /* ideas */
 
 Route::get("/ideas/create", [IdeaController::class, 'create']);
-Route::get("/ideas", [IdeaController::class, 'index']);
+//Route::get("/ideas", [IdeasController::class, 'index']);
+Route::post("/ideas", [IdeaController::class, 'store']);
 
-
-Route::get("/ideas/{id}", [IdeaController::class, 'show']);
+Route::get("/ideas/{id}", [IdeasController::class, 'show']);
 
 // login 
 
