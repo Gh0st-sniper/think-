@@ -14,11 +14,16 @@
 <label for=""> Title </label>
 <input type="text" name="title" id=""><br>
 <label for=""> Description </label>
-<input type="text" name="title" id=""><br>
+<input type="text" name="description" id=""><br>
 <input type="submit" value="Create Idea">
 
 
 </form>
-    
+
+@if ($errors->any())
+@foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+@endif
 </body>
 </html>
