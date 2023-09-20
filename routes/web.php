@@ -31,7 +31,7 @@ Route::get("/users/create", [UserController::class, 'create']);
 
 /* ideas */
 
-Route::get("/ideas", [IdeaController::class, 'create']);
+Route::get("/ideas/create", [IdeaController::class, 'create']);
 Route::get("/ideas", [IdeaController::class, 'index']);
 
 
