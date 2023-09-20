@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,5 +32,13 @@ Route::get("/users/create", [UserController::class, 'create']);
 /* ideas */
 
 Route::get("/ideas", [IdeaController::class, 'create']);
+Route::get("/ideas", [IdeaController::class, 'index']);
+
 
 Route::get("/ideas/{id}", [IdeaController::class, 'show']);
+
+// login 
+
+Route::get("/login", [LoginController::class,'create']);
+
+Route::post("/session", [LoginController::class,'store']);
