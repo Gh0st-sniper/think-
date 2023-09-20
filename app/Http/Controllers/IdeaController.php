@@ -34,6 +34,16 @@ class IdeaController extends Controller
     public function store(Request $request)
     {
         //
+
+        $validated = $request->validate([
+
+            'title' => 'required|min:5',
+            'description' => 'required|min:5'
+        ]);
+
+        $idea = $request->user()->ideas()->create($validated);
+
+        return redirect('/ideas');
     }
 
     /**
