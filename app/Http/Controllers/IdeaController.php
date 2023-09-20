@@ -4,15 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Idea;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IdeaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Idea $ideas)
     {
-        //
+        //$ideas = Auth::user()->ideas();
+
+        return view('ideas.index', ['ideas' => $ideas] );
     }
 
     /**
@@ -21,6 +24,8 @@ class IdeaController extends Controller
     public function create()
     {
         //
+
+        return view('ideas.create');
     }
 
     /**
