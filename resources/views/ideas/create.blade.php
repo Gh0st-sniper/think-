@@ -10,7 +10,7 @@
 <h1> Create an Idea </h1>
 
 <form action="/ideas" method="post">
-
+@csrf
 <label for=""> Title </label>
 <input type="text" name="title" id=""><br>
 <label for=""> Description </label>
