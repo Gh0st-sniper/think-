@@ -11,9 +11,11 @@ class Idea extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title', 'description','user_id'];
+
     public function user() {
 
-        $this->belongsTo(UserController::class);
+       return $this->belongsTo(User::class);
     }
 
 
@@ -21,7 +23,7 @@ class Idea extends Model
 
     public function comments() {
 
-        $this->hasMany(CommentController::class);
+       return  $this->hasMany(Comment::class);
     }
 
 }
