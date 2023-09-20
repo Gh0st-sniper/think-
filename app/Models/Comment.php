@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\IdeasController;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,6 +12,6 @@ class Comment extends Model
 
     public function ideas () {
 
-        $this->belongsTo(IdeaController::class);
+        $this->belongsTo(Idea::class);
     }
 }
