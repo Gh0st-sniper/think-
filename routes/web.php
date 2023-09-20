@@ -44,3 +44,6 @@ Route::get("/ideas/{id}", [IdeasController::class, 'show']);
 Route::get("/login", [LoginController::class,'create']);
 
 Route::post("/session", [LoginController::class,'store']);
+
+
+
