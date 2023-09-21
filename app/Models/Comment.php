@@ -10,8 +10,14 @@ class Comment extends Model
 {
     use HasFactory;
 
-    public function ideas () {
+    public function idea () {
 
         $this->belongsTo(Idea::class);
+
+    }
+
+    public function user ()
+    {
+        $this->belongsTo(User::class);
     }
 }
