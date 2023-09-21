@@ -7,6 +7,7 @@
 <a href="/ideas/create"> Create an Idea </a>
 
 
+
 @else
 
 @foreach($ideas as $idea)
@@ -30,6 +31,11 @@
 @endforeach
 
 <a href="/ideas/create"> Create an Idea </a>
+
+<form action="/logout" method="get">
+
+    <input type="submit" value="Logout">
+</form>
 
 @endif
 
