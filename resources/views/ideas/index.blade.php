@@ -15,6 +15,15 @@
 
 <p> {{ $idea->description }}  </p>
 
+<h6> Create Comment </h6>
+
+    <form action="/comments" method="post">
+
+    <textarea name="com" id="" cols="20" rows="4" placeholder="Whats on your mind ?"></textarea>
+
+    <input type="submit" value="Add comment">
+    </form>
+
 <hr>
 
 @endforeach
