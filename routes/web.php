@@ -45,5 +45,5 @@ Route::get("/login", [LoginController::class,'create']);
 
 Route::post("/session", [LoginController::class,'store']);
 
-
+Route::get("/logout", [LoginController::class, 'destroy']);
 
